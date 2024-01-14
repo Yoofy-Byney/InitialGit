@@ -2,7 +2,6 @@ def add(number1: int, number2:int):
     totalNumber = number1 + number2
     return totalNumber
 
-
 def sub(number1: int, number2:int):
     totalNumber = number1 - number2
     return totalNumber
@@ -11,11 +10,15 @@ def mult(number1: int, number2:int):
     totalNumber = number1 * number2
     return totalNumber
 
+def div(number1: int, number2:int):
+    totalNumber = number1 / number2
+    return totalNumber
+	
 userResponse = 'start'
 
 while (userResponse != 'quit'):
     
-    print('Select what you want to do\n1. Add\t2.Sub\t3.Mult')
+    print('Select what you want to do\n1. Add\t2.Sub\t3.Mult\t4.Div')
     userChoice = int(input())
 
     print('Enter your first number')
@@ -34,8 +37,12 @@ while (userResponse != 'quit'):
 
     elif userChoice == 3:
         recvTotal = mult(numberOne, numberTwo)
-        print('Your final multiplied is '+ str(recvTotal))
-
+        print('Your final multiplied value is '+ str(recvTotal))
+    
+    elif userChoice == 4:
+        recvTotal = div(numberOne, numberTwo)
+        print('Your final value is ' + str(recvTotal))
+ 	
     else:
         print('Invalid input try again')
 
